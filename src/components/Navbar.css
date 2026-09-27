@@ -1,0 +1,203 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba(248, 241, 236, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(74, 52, 45, 0.08);
+}
+
+.navbar-container {
+  width: min(1250px, 90%);
+  min-height: 78px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  color: #4a342d;
+  text-decoration: none;
+
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.navbar-logo span {
+  color: #a66f63;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  color: #66554e;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: #a66f63;
+
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #4a342d;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   BOOK BUTTON
+========================= */
+
+.navbar-book-btn {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 13px 18px;
+
+  background: #4a342d;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-book-btn span {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-book-btn:hover {
+  background: #6a4a40;
+  transform: translateY(-2px);
+}
+
+.navbar-book-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 11px;
+  }
+
+  .navbar-book-btn {
+    padding: 12px 15px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .navbar-container {
+    min-height: 70px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-logo {
+    font-size: 29px;
+  }
+
+  .navbar-book-btn {
+    padding: 11px 14px;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .navbar-book-btn span {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 420px) {
+  .navbar-container {
+    width: 90%;
+  }
+
+  .navbar-logo {
+    font-size: 27px;
+  }
+
+  .navbar-book-btn {
+    padding: 10px 12px;
+  }
+}
