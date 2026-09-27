@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview"
   },
+  "homepage": "https://aliz001-1.github.io/salon-booking/",
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
